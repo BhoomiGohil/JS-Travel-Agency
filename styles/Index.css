@@ -1,0 +1,154 @@
+@import "../styles/Header.css";
+@import "../styles/Section.css";
+@import "../styles/Footer.css";
+@import "../styles/Slider.css";
+
+@import "../styles/Reservation.css";
+@import "../styles/Contact.css";
+@import "../styles/Login.css";
+
+:root {
+  --white: white;
+  --black: black;
+  --blueDark: #0d406a;
+  --blueMedium: #1e638d;
+  --blueLight: #2aabe1;
+  --blueExtra: aliceblue;
+  --border: #f5fafb;
+  --red: red;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  background-image: linear-gradient(var(--blueDark), var(--white));
+  background-repeat: no-repeat;
+  overscroll-behavior: none;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+input,
+select,
+textarea {
+  text-transform: uppercase;
+}
+
+input {
+  margin: 0;
+}
+
+.content-wrapper {
+  width: 1200px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Forms */
+
+.form-input-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  grid-column: 1 / -1;
+}
+
+.form-input-button {
+  margin: 5px 0px 5px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.form-input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.form-input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid var(--blueDark);
+  color: var(--blueDark);
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-button {
+  height: 22px;
+  width: 110px;
+  background-color: var(--blueLight);
+  color: var(--white);
+  float: left;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: normal;
+  border: none;
+  text-transform: uppercase;
+}
+
+.form-button:hover {
+  background-color: var(--white);
+  color: var(--blueLight);
+}
+
+.form-error-message {
+  width: 100%;
+  height: 15px;
+  float: left;
+  color: var(--red);
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.no-border {
+  border: none;
+}
+
+.red {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+.blue {
+  color: var(--white);
+  background-color: var(--blueDark);
+}
+
+.black {
+  color: var(--white);
+  background-color: var(--black);
+}

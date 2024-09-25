@@ -1,0 +1,20 @@
+.contact {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 17px;
+  font-weight: normal;
+  color: var(--blueLight);
+}
+
+.contact-grid {
+  margin: auto;
+}
+
+.contact-grid-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: start;
+}

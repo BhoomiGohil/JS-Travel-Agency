@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Reservation</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../styles/Index.css" rel="stylesheet" type="text/css" />
+
+    <link rel="short icon" href="../Images/favicon.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body onload="reservationOnLoad()">
+    <div class="content-wrapper">
+      <header>
+        <a class="brand-link" href="Home.html"
+          ><img src="../Images/Logo.png" class="brand"
+        /></a>
+        <div class="navigation">
+          <a href="Home.html">Home</a>
+          <a href="Reservation.html">Reservation</a>
+          <a href="Contact.html">Contact Us</a>
+          <a id="headerProfile" href="Profile.html">Profile</a>
+          <a id="headerLogin" href="Login.html">Login</a>
+          <a id="headerLogout" href="Login.html" onclick="logout()">Logout</a>
+        </div>
+      </header>
+
+      <div class="reservation-by-selections">
+        <div
+          class="reservation-by-selection"
+          onclick="reservationTitle(this.innerHTML)"
+        >
+          Flight
+        </div>
+        <div
+          class="reservation-by-selection"
+          onclick="reservationTitle(this.innerHTML)"
+        >
+          Railway
+        </div>
+        <div
+          class="reservation-by-selection"
+          onclick="reservationTitle(this.innerHTML)"
+        >
+          Bus
+        </div>
+      </div>
+      <section>
+        <div class="reservation">
+          <div class="section-header" id="reservation-heading">
+            Flight Reservation
+          </div>
+          <form class="reservation-form" name="form">
+            <div class="form-input-buttons">
+              <div class="form-input-button">
+                <input type="radio" name="ways" value="one" checked />One Way
+              </div>
+              <div class="form-input-button">
+                <input type="radio" name="ways" value="two" />Round Trip
+              </div>
+            </div>
+
+            <div class="form-inputs">
+              <div class="form-input-block">
+                From
+                <div class="form-error-message"></div>
+                <select
+                  name="from"
+                  class="form-input-field"
+                  onfocus="inputFocus(this)"
+                  onblur="inputValidation(this)"
+                >
+                  <option selected="selected" value="PLEASE SELECT">
+                    Please Select
+                  </option>
+                </select>
+              </div>
+              <div class="form-input-block">
+                To
+                <div class="form-error-message"></div>
+                <select
+                  name="to"
+                  class="form-input-field"
+                  onfocus="inputFocus(this)"
+                  onblur="inputValidation(this)"
+                >
+                  <option selected="selected" value="PLEASE SELECT">
+                    Please Select
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-input-block">
+                Adults
+                <select name="adult" class="form-input-field"></select>
+              </div>
+              <div class="form-input-block">
+                Children
+                <select name="child" class="form-input-field"></select>
+              </div>
+              <div class="form-input-block">
+                Departure
+                <div class="form-error-message"></div>
+                <input
+                  type="date"
+                  name="departure"
+                  min=""
+                  max=""
+                  onchange="ChangeStartDate()"
+                  class="start-date form-input-field"
+                />
+              </div>
+              <div class="form-input-block">
+                Return
+                <div class="form-error-message"></div>
+                <input
+                  type="date"
+                  name="return"
+                  min=""
+                  max=""
+                  class="end-date form-input-field"
+                />
+              </div>
+            </div>
+
+            <div class="form-buttons">
+              <input
+                type="button"
+                class="form-button"
+                value="Find"
+                onclick="reservationFlights()"
+              />
+            </div>
+
+            <div class="reservation-lists">
+              <div class="reservation-list no-border">
+                <div class="reservation-detail">
+                  Flight results: 0 flights found
+                </div>
+                <div class="reservation-price-detail red">Economy</div>
+                <div class="reservation-price-detail blue">Premium Economy</div>
+                <div class="reservation-price-detail black">Business Class</div>
+              </div>
+              <!-- <img class="reservation-loading" src="../Images/loading.jpeg"></img> -->
+              <!-- <div class="reservation-list">
+                <div class="reservation-route-detail">
+                  <div class="reservation-route-timing">
+                    <div class="reservation-route-start-time">22:35</div>
+                    <div class="reservation-route-hours">
+                      1 Stop - 18hr25m (arriving 27 - Jul)
+                    </div>
+                    <div class="reservation-route-end-time">02:30</div>
+                  </div>
+                  <div class="reservation-route-locations">
+                    <div class="reservation-route-location">
+                      <p>Toronto</p>
+                      <p>Mumbai</p>
+                    </div>
+                    <div class="reservation-route-stops">
+                      <div class="reservation-route-dots"></div>
+                      <img
+                        src="../Images/wifi.jpg"
+                        class="reservation-route-wifi"
+                      />
+                      <div class="reservation-route-text"><p>DEL</p></div>
+                      <img
+                        src="../Images/wifi.jpg"
+                        class="reservation-route-wifi"
+                      />
+                      <div class="reservation-route-dots"></div>
+                      <div class="reservation-route-line"></div>
+                    </div>
+                    <div class="reservation-route-waiting-time">
+                      <p>+ 2hr10m</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reservation-price-detail">
+                  <p>$1868</p>
+                </div>
+                <div class="reservation-price-detail">
+                  <p>$2038</p>
+                  <p>Mixed cabin</p>
+                </div>
+                <div class="reservation-price-detail">
+                  <p>$2981</p>
+                  <p>Includes lie-flat seats</p>
+                </div>
+              </div> -->
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-tagline">
+          Travel With Us On Your Favourite Destination
+        </div>
+        <div class="footer-copyright">
+          © 2018 S & S Company Limited All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+
+    <script src="../Javascript.js"></script>
+  </body>
+</html>

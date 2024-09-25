@@ -1,0 +1,26 @@
+/* Section */
+
+section {
+  width: 100%;
+  min-height: 65vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.no-background {
+  background: none;
+}
+
+.section-header {
+  width: 100%;
+  padding-top: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--blueDark);
+  text-align: center;
+  text-transform: uppercase;
+}
