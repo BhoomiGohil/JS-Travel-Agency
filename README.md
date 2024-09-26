@@ -23,9 +23,11 @@ To clone this project to your local machine, follow these steps:
 2. Navigate to the directory where you want to clone the project.
 3. Run the following command:
 
-   ```bash
-   git clone https://github.com/BhoomiGohil/Javascript.git
-   ```
+```bash
+git clone https://github.com/BhoomiGohil/Javascript-TourTravels.git
+cs Javascript-TourTravels/html
+open Home.html
+```
 
 ## How to Run the Project on a Server
 
@@ -33,7 +35,7 @@ If you are using Visual Studio Code, you can run this project using the Live Ser
 
 1. Navigate to **Extensions** in the sidebar.
 2. Search for **"Live Server"** and install it.
-3. Once installed, click on the **Go Live** option in the bottom-right corner of the window to run the project.
+3. Once installed, right-click on the **Home.html** file and click on **Open with Live Server**.
 
 ## Project Visuals
 
