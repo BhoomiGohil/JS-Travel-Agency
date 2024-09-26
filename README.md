@@ -24,8 +24,8 @@ To clone this project to your local machine, follow these steps:
 3. Run the following command:
 
 ```bash
-git clone https://github.com/BhoomiGohil/Javascript-TourTravels.git
-cs Javascript-TourTravels/html
+git clone https://github.com/BhoomiGohil/Travel-Agency2.git
+cs Travel-Agency2/html
 open Home.html
 ```
 
