@@ -9,6 +9,18 @@ This project is a dynamic web application designed for exploring travel destinat
 - Responsive design for accessibility on different devices
 - Easy navigation between different sections of the application
 
+## Project Visuals
+
+Below are some visuals of the project:
+
+### Home Page
+
+![Home Page](./Website%20Images/Home.png)
+
+### Login Page
+
+![Login Page](./Website%20Images/Login.png)
+
 ## Getting Started
 
 ### Prerequisites
@@ -36,18 +48,6 @@ If you are using Visual Studio Code, you can run this project using the Live Ser
 1. Navigate to **Extensions** in the sidebar.
 2. Search for **"Live Server"** and install it.
 3. Once installed, right-click on the **Home.html** file and click on **Open with Live Server**.
-
-## Project Visuals
-
-Below are some visuals of the project:
-
-### Home Page
-
-![Home Page](./Website%20Images/Home.png)
-
-### Login Page
-
-![Login Page](./Website%20Images/Login.png)
 
 ## Technologies Used
 
